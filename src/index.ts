@@ -26,7 +26,7 @@ export default class NumberColumnType {
     }
 
     cellTemplate = (_h: RevoGrid.HyperFunc<VNode>, p: RevoGrid.ColumnDataSchemaModel): string => {
-        const parsed = parseInt(p.model[p.prop], 10);
+        const parsed = parseFloat(p.model[p.prop], 10);
         if (isNaN(parsed)) {
             return '';
         }
